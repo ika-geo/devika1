@@ -1,0 +1,43 @@
+.cardItem {
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 7px;
+  border: 2px solid #373737;
+}
+.cardItem .mern {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: rgb(0, 209, 247);
+  box-shadow: 0 0 20px 5px rgb(0, 209, 247);
+}
+.cardItem .onHover {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  padding: 40px;
+  transition: 0.3s linear;
+}
+.cardItem .onHover .technologies {
+  margin-bottom: 20px;
+}
+.cardItem .onHover .technologies .technologies__items .technologies__item {
+  margin-right: 15px;
+  line-height: 1.5;
+}
+.cardItem .onHover a {
+  width: fit-content;
+}
+.cardItem:hover .onHover {
+  top: 0;
+  transition: 0.3s linear;
+}
+
+/*# sourceMappingURL=portfolioItem.css.map */

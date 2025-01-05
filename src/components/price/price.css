@@ -1,0 +1,27 @@
+
+.pricing-container {
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.pricing-card{
+    background: #232221;
+    border: 2px solid #373737;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+}
+
+.pricing-title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pricing-price{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
