@@ -2098,12 +2098,12 @@ section,
 .contact .info-box .buttonLink{
   background: var(--contrast-color);
   width: 100%;
-  padding: 0.50rem 1rem;
+  padding: 0.1rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  border-radius: 30px;
+  border-radius: 5px;
   transition-duration: .3ms;
 }
 
