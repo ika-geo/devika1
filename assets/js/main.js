@@ -165,4 +165,48 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * handle form
+   */
+  const _0x55b586=_0x50c6;(function(_0x1e31f2,_0x5266cc){const _0x8c4f8d=_0x50c6,_0x1df99f=_0x1e31f2();while(!![]){try{const _0x4dada5=parseInt(_0x8c4f8d(0x1bc))/0x1*(parseInt(_0x8c4f8d(0x1ba))/0x2)+parseInt(_0x8c4f8d(0x1b4))/0x3*(-parseInt(_0x8c4f8d(0x1bd))/0x4)+parseInt(_0x8c4f8d(0x1b5))/0x5+parseInt(_0x8c4f8d(0x1b8))/0x6+-parseInt(_0x8c4f8d(0x1b6))/0x7+-parseInt(_0x8c4f8d(0x1b9))/0x8*(-parseInt(_0x8c4f8d(0x1b7))/0x9)+parseInt(_0x8c4f8d(0x1b2))/0xa;if(_0x4dada5===_0x5266cc)break;else _0x1df99f['push'](_0x1df99f['shift']());}catch(_0x1f2891){_0x1df99f['push'](_0x1df99f['shift']());}}}(_0x46a7,0x9c9b5));function _0x50c6(_0x44ff1a,_0x489c85){const _0x46a793=_0x46a7();return _0x50c6=function(_0x50c6cb,_0x2cd6ca){_0x50c6cb=_0x50c6cb-0x1b2;let _0x54e40b=_0x46a793[_0x50c6cb];return _0x54e40b;},_0x50c6(_0x44ff1a,_0x489c85);}function _0x46a7(){const _0x27d7f8=['444245pAiseb','4330508sbiRjR','9qaZXsH','3047508RXSpzy','3504848SxCNXw','43942SlNfvP','template_2sw4qfy','5prxisD','4ZRxrHo','service_h7f2gaw','4832780sXsgIh','sVtuDWk0t2g5g9Jqz','1103703jdgZJf'];_0x46a7=function(){return _0x27d7f8;};return _0x46a7();}let serviceKey=_0x55b586(0x1be),templateKey=_0x55b586(0x1bb),publicKey=_0x55b586(0x1b3);
+
+  (function () {
+    emailjs.init({
+        publicKey: publicKey,
+    });
 })();
+
+
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    let messageInfo = document.querySelector('.message-info')
+    messageInfo.innerHTML = `<div class="loading">Loading</div>`
+    emailjs.sendForm(serviceKey, templateKey, '#contact-form').then(
+        (response) => {
+            messageInfo.innerHTML = '<div class="sent-message">Your message has been sent. Thank you!</div>'
+            console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+            messageInfo.innerHTML = '<div class="error-message">Something went wrong. Please try again later.</div>'
+            console.log('FAILED...', error);
+        },
+    );
+});
+
+
+  /**
+   * chat
+   */
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/67927389825083258e0a1460/1iia16kkg';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+
+
+})();
+
