@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PP5VE1MDN7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PP5VE1MDN7');
+</script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Devika</title>
@@ -1089,26 +1098,6 @@
 
                             </div>
                         </form>
-
-                        <script type="text/javascript">
-                            // Handle form submission
-                            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                                event.preventDefault(); // Prevent the form from submitting normally
-                                let messageInfo = document.querySelector('.message-info')
-                                messageInfo.innerHTML = `<div class="loading">Loading</div>`
-                                emailjs.sendForm('service_h7f2gaw', 'template_2sw4qfy', '#contact-form').then(
-                                    (response) => {
-                                        messageInfo.innerHTML = '<div class="sent-message">Your message has been sent. Thank you!</div>'
-                                        console.log('SUCCESS!', response.status, response.text);
-                                    },
-                                    (error) => {
-                                        messageInfo.innerHTML = '<div class="error-message">Something went wrong. Please try again later.</div>'
-                                        console.log('FAILED...', error);
-                                    },
-                                );
-                            });
-                        </script>
-
                     </div>
                 </div>
 
@@ -1226,32 +1215,6 @@
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script type="text/javascript">
-    (function () {
-        emailjs.init({
-            publicKey: 'sVtuDWk0t2g5g9Jqz',
-        });
-    })();
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/67927389825083258e0a1460/1iia16kkg';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-<!--End of Tawk.to Script-->
-
-
-
-
 </body>
 
 </html>
