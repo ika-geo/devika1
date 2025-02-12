@@ -3,14 +3,18 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PP5VE1MDN7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PP5VE1MDN7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-PP5VE1MDN7');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PP5VE1MDN7');
+    </script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Devika</title>
@@ -104,9 +108,9 @@
                             impressions.
                         </p>
 
-                                      <div class="hero-buttons">
-                                        <a href="#contact" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                                      </div>
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
+                        </div>
                     </div>
                 </div>
 
@@ -943,7 +947,10 @@
                         <div class="faq-item faq-passive">
                             <h3>Do I need to have a domain and hosting before we start?</h3>
                             <div class="faq-content">
-                                <p>The price includes a complimentary domain and hosting, applicable only if the client subscribes to the Monthly Maintenance plan or purchases a Multi-Page Website. In other cases, we will provide guidance in selecting the most suitable domain and hosting options.</p>
+                                <p>The price includes a complimentary domain and hosting, applicable only if the client
+                                    subscribes to the Monthly Maintenance plan or purchases a Multi-Page Website. In
+                                    other cases, we will provide guidance in selecting the most suitable domain and
+                                    hosting options.</p>
                             </div>
                             <i class="faq-toggle bi bi-chevron-right"></i>
                         </div><!-- End Faq item-->
@@ -1058,7 +1065,6 @@
                                 <a class="text" target="_self" href="mailto:contact@devika.pro">contact@devika.pro</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -1093,7 +1099,7 @@
                                     <div class="message-info">
                                     </div>
 
-                                    <button type="submit" class="btn">Send Message</button>
+                                    <input type="submit" value="Send Message" class="btn"/>
                                 </div>
 
                             </div>
@@ -1216,15 +1222,50 @@
 </script>
 
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    /**
+     * handle form
+     */
+    function _0x4503(_0x2df5dd,_0x519fd6){const _0x5046c8=_0x5046();return _0x4503=function(_0x45035c,_0x180018){_0x45035c=_0x45035c-0x1ea;let _0x3861e9=_0x5046c8[_0x45035c];return _0x3861e9;},_0x4503(_0x2df5dd,_0x519fd6);}const _0x4c321e=_0x4503;(function(_0x3df80e,_0xf52253){const _0x1f285f=_0x4503,_0x5a4066=_0x3df80e();while(!![]){try{const _0x4f6378=parseInt(_0x1f285f(0x1ec))/0x1+parseInt(_0x1f285f(0x1ef))/0x2*(-parseInt(_0x1f285f(0x1f2))/0x3)+parseInt(_0x1f285f(0x1f4))/0x4*(parseInt(_0x1f285f(0x1ea))/0x5)+-parseInt(_0x1f285f(0x1eb))/0x6+-parseInt(_0x1f285f(0x1f3))/0x7+parseInt(_0x1f285f(0x1f0))/0x8*(-parseInt(_0x1f285f(0x1ee))/0x9)+parseInt(_0x1f285f(0x1f6))/0xa;if(_0x4f6378===_0xf52253)break;else _0x5a4066['push'](_0x5a4066['shift']());}catch(_0x7aac1d){_0x5a4066['push'](_0x5a4066['shift']());}}}(_0x5046,0xc08ce));function _0x5046(){const _0x866d0e=['817417arqqIM','template_2sw4qfy','36fOoHQU','214akpcED','2304456LZUKws','service_h7f2gaw','8859NQUzBY','127358KIprpM','457492dpmUiN','S8_Y148ZpqDiI5-VO','13765780nqHDKy','35AbDGEQ','4317162uEkDlU'];_0x5046=function(){return _0x866d0e;};return _0x5046();}let publicKey=_0x4c321e(0x1f5),serviceKey=_0x4c321e(0x1f1),templateKey=_0x4c321e(0x1ed);
+
+    (function () {
+        emailjs.init({
+            publicKey: publicKey,
+        });
+    })();
+
+
+    document.getElementById('contact-form').addEventListener('submit', submitForm);
+
+    function submitForm(e) {
+        e.preventDefault()
+        let messageInfo = document.querySelector('.message-info')
+        messageInfo.innerHTML = `<div class="loading">Loading</div>`
+        emailjs.sendForm(serviceKey, templateKey, '#contact-form', publicKey).then(
+            (response) => {
+                messageInfo.innerHTML = '<div class="sent-message">Your message has been sent. Thank you!</div>'
+                // console.log('SUCCESS!', response.status, response.text);
+            },
+            (error) => {
+                messageInfo.innerHTML = '<div class="error-message">Something went wrong. Please try again later.</div>'
+                // console.log('FAILED...', error);
+            },
+        );
+    }
+
+
+</script>
+
 <script>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/67927389825083258e0a1460/1iia16kkg';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/67927389825083258e0a1460/1iia16kkg';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
 
