@@ -470,6 +470,10 @@ h6 {
   padding-top: 50px;
 }
 
+.footer .footer-about{
+  margin-bottom: 30px;
+}
+
 .footer .footer-about .logo {
   line-height: 1;
   margin-bottom: 25px;
@@ -537,8 +541,17 @@ h6 {
 
 .footer .footer-links ul li {
   padding: 10px 0;
-  display: flex;
-  align-items: center;
+}
+
+
+@media screen and (min-width: 992px) {
+  .footer .footer-links ul li {
+    display: block;
+    text-align: center;
+  }
+  .footer .footer-links h4 {
+    text-align: center;
+  }
 }
 
 .footer .footer-links ul li:first-child {
@@ -2372,6 +2385,22 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+.footer-partner{
+  width: fit-content;
+  margin-left: auto
+}
+
+.footer-partner{
+  width: fit-content;
+  margin-left: auto
+}
+
+@media (max-width: 991px) {
+  .footer-partner{
+    margin-left: 0
+  }
 }
 
 /*--------------------------------------------------------------
